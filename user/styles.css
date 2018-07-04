@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    height: 20%;
+    background-color: #daa520;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.container > div  {
+    border: 1px solid black;
+}
+
+.home-img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+
+.col {
+    width: 50px;
+    background-color: rgb(38, 0, 128);
+    color: #ccc;
+}
+
+.row {
+    margin-top: 10px;
+    background-color: darkblue;
+    justify-content: center;
+}
+
+.images {
+    margin-top: 5%;
+}
+
+.d-block {
+    width: 800px;
+    height: 600px;
+    
+    object-fit: cover;
+}
+
+.row_3 {
+    margin-top: 10px;
+    background-color: darkblue;
+    /* height: 400px; */
+     
+}
+
+.col-3 {
+    
+    height: 200px;
+    background-color: #87ceeb;
+    font-size: 2rem;
+    text-align: center;
+    align-content: flex-end;
+}
+
+.card_2 {
+    margin: 0 1% 0 1%; 
+}
+
+.myImage {
+    float: right;
+    height: 480px;
+    align-self: flex-end;
+    object-fit: cover;
+}
+
+.myCards {
+    /* width: 100%; */
+    flex-direction: row;
+}
+
+
+.card-img-top {
+    object-fit: cover;
+    color: #000;
+}
+
+.card-title {
+    text-align: center;
+}
+
+#formGroupExampleInput, #formGroupExampleInput2 {
+    width: 50%;
+}
+
+#exampleFormControlTextarea1 {
+    width: 550px;
+}
+
+/* About me text */
+.abtext {
+    text-align: justify;
+}
+
+
+@media only screen and (max-width: 492px) {
+
+    .card-img-top {
+        display: none;
+    }
+
+    .myImage {
+        object-fit: cover;
+        
+        height: 120px;
+    }
+
+    #exampleFormControlTextarea1 {
+        width: 200px;
+    }
+
+}
+
+@media only screen and (min-width: 493px) and (max-width: 800px) {
+
+    .card-title, .card-text {
+        font-size: 80%;
+    }
+
+    .myImage {
+        height: 240px; 
+    }
+
+
+
+}
+
