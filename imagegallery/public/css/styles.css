@@ -1,0 +1,474 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.header {
+    height: 20%;
+    background-color: #daa520;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.navbar {
+    width: 80%;
+    margin-left: 10%;
+    justify-content: space-between;
+    /* For any issues, it's possible to use "ml-auto" on the class of the button tag.
+       At least it worked on this day -> 04-07-2018.
+    */
+}
+
+.main-container > div  {
+    border: 1px solid black;
+    width: 80%;
+    max-width: 1920px;
+    align-self: center;
+    margin-left: 10%;
+}
+
+.uploadButton {
+    /* float: left; */
+    /* align-self: flex-end; */
+}
+
+
+.column-layout {
+    display: grid;
+    grid-row: 3;
+    grid-template-columns: 10em 57em;
+    grid-template-rows: 33em;
+    grid-gap: 0.4em;
+    margin: 0 0.5em;
+    height: 100%;
+}
+
+.main-column {
+    
+    width: 100%;
+    
+    background-color: rgba(16, 16, 43, 0.753);
+    
+    grid-row: 3;
+    display: grid; /* Grid for the thumbnails. */
+    grid-template-columns: repeat(4, 350px);
+    grid-template-rows: 230px 230px 230px;
+    grid-column-gap: 1em;
+    grid-row-gap: 2em;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+
+figure {
+    padding: 0.25%;
+    box-shadow: 0 4px 8px 0 rgb(31, 5, 5, 0.2), 0 6px 20px 0 rgb(29, 29, 29, 0.19);
+}
+
+.image-Thumb {
+    position: relative; /* This is important, so the button can stay over the image. */
+}
+
+.image-Thumb #remove-Image {
+    position: absolute; /* This is also important, so the button can stay over the image. */
+    width: 24px;
+    height: 24px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border-radius: 3px;
+    /* padding-top: -30px;  */
+    outline: none;
+    border: none;
+    transition: 0.6s;
+    opacity: 0;
+    right: 2.5px;
+    
+    
+}
+
+.ion-android-delete {
+    
+}
+
+#remove-Image:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+figure:hover {
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255, 0.2), 0 6px 20px 0 rgb(245, 245, 245, 0.19);   
+    cursor: pointer;
+}
+
+.thumb {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.fgcap {
+    background-color: rgb(21, 69, 172);
+    color: #fff;
+    text-align: center;
+}
+
+.slideshow {
+    background-color: #000;
+    height: 100%;
+}
+
+.close-slideshow {
+    
+    font-size: 3rem;
+    float: right;
+}
+
+.leftArrow-btn, .rightArrow-btn {
+    font-size: 2rem;
+}
+
+.close-slideshow, .leftArrow-btn:hover, .rightArrow-btn:hover {
+    color: #999;
+}
+
+.close-slideshow:hover, .leftArrow-btn:hover, .rightArrow-btn:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.large-Images {
+    width: 1152px;
+    height: 648px;
+    object-fit: cover;
+    margin-left: 20%;
+    margin-top: 1.5%;
+    position: relative;
+    /* transition: ease-in-out 5s; */
+}
+
+.image-caption {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    /* right: 50%; */
+
+}
+
+.mySlides {
+    display:none;
+}
+
+.arrows-container {
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: space-between;
+}
+
+.rightArrow-btn {
+    float: right;
+}
+
+.thumbs-Section {
+    width: 60%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+.imgSel {
+    /* It's still important to define fixed size for each image. */
+    width: 185px;
+    height: 89px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.imgSel:hover {
+    opacity: 1;
+}
+
+.img-Title, .img-Text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+    text-shadow: 2px 2px 8px #333333;
+    text-align: center;
+}
+
+.img-Title {
+    font-size: 2em;
+}
+
+.img-Text {
+    font-size: 1.2em;
+}
+
+
+@media only screen and (min-width: 1680px) and (max-width: 1840px) {
+
+    .main-column {
+        grid-template-columns: repeat(4, 310px);
+        grid-template-rows: 177px 177px 177px;        
+    }
+
+    .thumb {
+        width: 310px;
+        height: 177px;
+        object-fit: cover;
+    }
+
+    .large-Images {
+        width: 1008px;
+        height: 567px;
+        object-fit: cover;
+    }
+
+    .image-caption {
+        top: 50%;
+        left: 45%;
+        /* right: 50%; */
+    
+    }
+
+    .imgSel {
+        width: 150px;
+        height: 72px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1679px) {
+
+    .main-column {
+        grid-template-columns: repeat(4, 260px);
+        grid-template-rows: 149px 149px 149px;        
+    }
+
+    .thumb {
+        width: 260px;
+        height: 149px;
+        object-fit: cover;
+    }
+
+    .large-Images {
+        width: 820px;
+        height: 461px;
+        object-fit: cover;
+    }
+
+    .image-caption {
+        top: 50%;
+        left: 42.5%;    
+    }
+
+    .imgSel {
+        width: 150px;
+        height: 72px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+}
+
+
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+
+    .main-column {
+        grid-template-columns: repeat(4, 240px);
+        grid-template-rows: 137px 137px 137px;        
+    }
+
+    .thumb {
+        width: 240px;
+        height: 137px;
+        object-fit: cover;
+    }
+
+    .fgcap {
+        width: 240px;
+    }
+
+    .large-Images {
+        width: 749px;
+        height: 422px;
+        object-fit: cover;
+    }
+
+    .image-caption {
+        top: 50%;
+        left: 42.5%;    
+    }
+
+    .imgSel {
+        width: 120px;
+        height: 58px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
+    .main-column {
+        grid-template-columns: repeat(4, 185px);
+        grid-template-rows: 106px 106px 106px;        
+    }
+
+    .thumb {
+        width: 185px;
+        height: 106px;
+        object-fit: cover;
+    }
+
+    .fgcap {
+        width: 185px;
+    }
+
+    .large-Images {
+        width: 614px;
+        height: 461px;
+        object-fit: cover;
+    }
+
+
+    .image-caption {
+        top: 50%;
+        left: 42.5%;    
+    }
+
+    .imgSel {
+        width: 100px;
+        height: 48px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .main-column {
+        grid-template-columns: repeat(2, 250px);
+        grid-template-rows: repeat(6, 143px);        
+    }
+
+    .thumb {
+        width: 250px;
+        height: 143px;
+        object-fit: cover;
+    }
+
+    .fgcap {
+        width: 250px;
+    }
+
+    .large-Images {
+        width: 461px;
+        height: 258px;
+        object-fit: cover;
+    }
+
+    .image-caption {
+        top: 17.5%;
+        left: 37.5%;    
+    }
+
+    .imgSel {
+        width: 70px;
+        height: 34px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    /* This is to adapt the title and buttons */
+    .col-4 {
+        /* font-size: 0.6em; */
+        /* width: 66.66666666666%; */
+    }
+
+    .search-Tag {
+        width: 100px;
+    }
+
+    .main-column {
+        grid-template-columns: repeat(2, 180px);
+        grid-template-rows: repeat(6, 103px);        
+    }
+
+    .thumb {
+        width: 180px;
+        height: 103px;
+        object-fit: cover;
+    }
+
+    
+
+    .fgcap {
+        width: 180px;
+    }
+
+    
+
+    .large-Images {
+        width: 461px;
+        height: 258px;
+        object-fit: cover;
+    }
+
+    .w3-col {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 490px) {
+
+    /* This is to adapt the title and buttons */
+    .header {
+        /* font-size: 0.585em; */
+    }
+
+    .search-Tag {
+        width: 80px;
+    }
+
+    .search-Button, .uploadButton {
+        font-size: 0.8em;
+    }
+
+    .main-column {
+        grid-template-columns: repeat(1, 250px);
+        grid-template-rows: repeat(12, 143px);        
+    }
+
+    .thumb {
+        width: 250px;
+        height: 143px;
+        object-fit: cover;
+    }
+
+    .fgcap {
+        width: 250px;
+    }
+
+    .w3-section {
+        display: none;
+    }
+}
