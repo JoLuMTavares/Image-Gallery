@@ -91,7 +91,7 @@ function getData() {
     thumbsImgTag.innerHTML = "";    
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://jolumtavares.github.io:3000/search?");
+    xhr.open("GET", "https://jolumtavares.github.io:3000/search?");
 
     xhr.onload = function () {
         if (xhr.status === 200) {
@@ -161,7 +161,7 @@ function searchImages() {
         thumbsImgTag.innerHTML = "";
 
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://jolumtavares.github.io:3000/search?q="+ searchImgTag);
+        xhr.open("GET", "https://jolumtavares.github.io:3000/search?q="+ searchImgTag);
 
         xhr.onload = function () {
             if (xhr.status === 200) {
